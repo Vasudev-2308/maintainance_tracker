@@ -1,0 +1,92 @@
+import 'package:flutter/material.dart';
+import 'package:maintainance_tracker/authentication/register.dart';
+import 'package:maintainance_tracker/shared/loading.dart';
+
+class StartPage extends StatefulWidget {
+  @override
+  _StartPageState createState() => _StartPageState();
+}
+
+class _StartPageState extends State<StartPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Stack(
+      children: <Widget>[
+        Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage('assets/green.png'),
+            fit: BoxFit.fill,
+          )),
+        ),
+        Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Maintainance App",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 21.0,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 30),
+              new FloatingActionButton.extended(
+                heroTag: "cont",
+                onPressed: () {
+                  Navigator.of(context).pushNamed("/loading");
+                },
+                icon: Icon(
+                  Icons.home,
+                  size: 30,
+                  color: Colors.white,
+                ),
+                label: Text(
+                  "Continue to Payment",
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                backgroundColor: Colors.purple[800],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              new FloatingActionButton.extended(
+                heroTag: "google",
+                onPressed: () {},
+                label: Text(
+                  "Sign-Up with Google",
+                  style: TextStyle(fontSize: 20),
+                ),
+                icon: Icon(
+                  Icons.mail_sharp,
+                  size: 30,
+                ),
+                backgroundColor: Colors.red,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              new FloatingActionButton.extended(
+                heroTag: "phone",
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => Register()));
+                },
+                label: Text(
+                  "Sign-Up with Phone",
+                  style: TextStyle(fontSize: 20),
+                ),
+                icon: Icon(
+                  Icons.phone,
+                  size: 30,
+                ),
+                backgroundColor: Colors.green[800],
+              ),
+            ],
+          ),
+        ),
+      ],
+    ));
+  }
+}
