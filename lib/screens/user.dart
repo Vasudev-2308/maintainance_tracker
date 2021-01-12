@@ -17,13 +17,13 @@ class _UserProfileState extends State<UserProfile> {
         },
         child: Scaffold(
           appBar: AppBar(
-            iconTheme: IconThemeData(color: Colors.white),
-            backgroundColor: Colors.purple[800],
-            title: Text("Profile"),
-            centerTitle: true,
-            elevation: 0,
-            bottomOpacity: 0,
-          ),
+              iconTheme: IconThemeData(color: Colors.white),
+              backgroundColor: Colors.purple[800],
+              title: Text("Profile"),
+              centerTitle: true,
+              elevation: 0,
+              bottomOpacity: 0,
+              leading: new Container()),
           body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

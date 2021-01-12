@@ -18,13 +18,13 @@ class _TransactionsState extends State<Transactions> {
         },
         child: Scaffold(
           appBar: AppBar(
-            iconTheme: IconThemeData(color: Colors.white),
-            backgroundColor: Colors.purple[800],
-            title: Text("Transactions"),
-            centerTitle: true,
-            elevation: 0,
-            bottomOpacity: 0,
-          ),
+              iconTheme: IconThemeData(color: Colors.white),
+              backgroundColor: Colors.purple[800],
+              title: Text("Transactions"),
+              centerTitle: true,
+              elevation: 0,
+              bottomOpacity: 0,
+              leading: new Container()),
           body: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(

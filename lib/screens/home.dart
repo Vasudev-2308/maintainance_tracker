@@ -24,6 +24,7 @@ class _HomePageState extends State<HomePage> {
             centerTitle: true,
             elevation: 0,
             bottomOpacity: 0,
+            leading: new Container(),
           ),
           body: Container(
             decoration: BoxDecoration(
