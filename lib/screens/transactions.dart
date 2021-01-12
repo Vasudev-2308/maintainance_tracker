@@ -26,9 +26,6 @@ class _TransactionsState extends State<Transactions> {
               bottomOpacity: 0,
               leading: new Container()),
           body: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/trans.png"), fit: BoxFit.fill)),
             child: Center(
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

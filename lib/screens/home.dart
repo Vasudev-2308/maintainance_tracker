@@ -27,9 +27,6 @@ class _HomePageState extends State<HomePage> {
             leading: new Container(),
           ),
           body: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/home.png"), fit: BoxFit.fill)),
             child: Stack(
               children: <Widget>[
                 Center(
