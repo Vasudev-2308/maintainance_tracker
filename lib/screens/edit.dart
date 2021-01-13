@@ -10,8 +10,17 @@ class _EditState extends State<EditForm> {
   Widget build(BuildContext context) {
     return Container(
         child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        Container(
+            child: Icon(
+          Icons.drag_handle_sharp,
+          size: 50,
+          color: Colors.purple,
+        )),
+        SizedBox(
+          height: 20,
+        ),
         TextFormField(
           initialValue: "Owner Name",
         ),
@@ -24,6 +33,13 @@ class _EditState extends State<EditForm> {
         SizedBox(
           height: 20,
         ),
+        DropdownButton(
+            items: [],
+            onChanged: null,
+            icon: Icon(
+              Icons.payment,
+              color: Colors.greenAccent,
+            )),
         FlatButton.icon(
           onPressed: () {},
           icon: Icon(

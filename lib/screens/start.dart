@@ -15,7 +15,7 @@ class _StartPageState extends State<StartPage> {
         body: Stack(children: <Widget>[
           Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 2,
+            height: MediaQuery.of(context).size.height / 1.7,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/wavy2.png'),

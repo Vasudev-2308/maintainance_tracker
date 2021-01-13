@@ -17,15 +17,6 @@ class _HomePageState extends State<HomePage> {
           ));
         },
         child: Scaffold(
-          appBar: AppBar(
-            iconTheme: IconThemeData(color: Colors.white),
-            backgroundColor: Colors.purple[800],
-            title: Text("Home"),
-            centerTitle: true,
-            elevation: 0,
-            bottomOpacity: 0,
-            leading: new Container(),
-          ),
           body: Container(
             child: Stack(
               children: <Widget>[
