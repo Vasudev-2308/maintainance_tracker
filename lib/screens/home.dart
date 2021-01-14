@@ -20,23 +20,27 @@ class _HomePageState extends State<HomePage> {
           body: Container(
             child: Stack(
               children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/wavy3.png'),
+                          fit: BoxFit.cover)),
+                  height: MediaQuery.of(context).size.height / 1.66,
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(30, 70, 0, 0),
+                  child: Text(
+                    "Home",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25),
+                  ),
+                ),
                 Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Home",
-                        style: TextStyle(color: Colors.grey[800]),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Icon(
-                        Icons.history,
-                        color: Colors.deepPurple,
-                        size: 40,
-                      )
-                    ],
+                    children: [],
                   ),
                 ),
               ],

@@ -19,9 +19,6 @@ class MyApp extends StatelessWidget {
       home: Wrapper(),
       title: "Maintainance",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        accentColor: Colors.deepPurple,
-      ),
       initialRoute: '/start',
       routes: {
         '/start': (context) => StartPage(),

@@ -16,23 +16,28 @@ class _UserProfileState extends State<UserProfile> {
           ));
         },
         child: Scaffold(
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("User View"),
-                SizedBox(
-                  height: 20,
+          body: Stack(
+            children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/wavy4.png'),
+                        fit: BoxFit.cover)),
+                height: MediaQuery.of(context).size.height / 1.66,
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(30, 70, 0, 0),
+                child: Text(
+                  "User",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25),
                 ),
-                Icon(
-                  Icons.person,
-                  size: 40,
-                  color: Colors.grey[800],
-                ),
-                SizedBox(
-                  height: 35,
-                ),
-                FloatingActionButton.extended(
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(125, 800, 100, 40),
+                child: FloatingActionButton.extended(
                   onPressed: () {
                     Navigator.of(context).pushNamed('/start');
                   },
@@ -49,9 +54,9 @@ class _UserProfileState extends State<UserProfile> {
                     size: 30,
                   ),
                   backgroundColor: Colors.deepPurple,
-                )
-              ],
-            ),
+                ),
+              ),
+            ],
           ),
         ));
   }

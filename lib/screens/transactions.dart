@@ -18,21 +18,33 @@ class _TransactionsState extends State<Transactions> {
         },
         child: Scaffold(
           body: Container(
-            child: Center(
-                child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Transactions"),
-                SizedBox(
-                  height: 20,
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/wavy4.png'),
+                          fit: BoxFit.cover)),
+                  height: MediaQuery.of(context).size.height / 1.66,
                 ),
-                Icon(
-                  Icons.monetization_on,
-                  color: Colors.green,
-                  size: 40,
-                )
+                Container(
+                  padding: EdgeInsets.fromLTRB(30, 70, 0, 0),
+                  child: Text(
+                    "Transactions",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25),
+                  ),
+                ),
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [],
+                  ),
+                ),
               ],
-            )),
+            ),
           ),
           floatingActionButton: FloatingActionButton.extended(
             onPressed: () {
@@ -55,7 +67,7 @@ class _TransactionsState extends State<Transactions> {
             ),
             label: Text("New Payment"),
             tooltip: "Add New Payment",
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.blue[600],
             splashColor: Colors.purple[800],
           ),
         ));
