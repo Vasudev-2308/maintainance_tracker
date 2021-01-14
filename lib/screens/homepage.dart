@@ -27,36 +27,36 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: Center(child: tabs.elementAt(selectedpage)),
       bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Colors.deepPurple,
-          unselectedItemColor: Colors.deepOrange,
           currentIndex: selectedpage,
+          selectedItemColor: ThemeData.dark().accentColor,
+          unselectedItemColor: Colors.white,
           type: BottomNavigationBarType.shifting,
           items: [
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
-                color: Colors.deepPurple,
+                //color: Colors.deepPurple,
               ),
               label: "Home",
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.money,
-                color: Colors.deepPurple,
+                //color: Colors.deepPurple,
               ),
               label: "Transactions",
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.assistant,
-                color: Colors.deepPurple,
+                // color: Colors.deepPurple,
               ),
               label: "Karen",
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.person,
-                color: Colors.deepPurple,
+                // color: Colors.deepPurple,
               ),
               label: "Profile",
             )
