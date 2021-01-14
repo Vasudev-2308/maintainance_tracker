@@ -35,28 +35,28 @@ class _UserProfileState extends State<UserProfile> {
                       fontSize: 25),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.fromLTRB(125, 800, 100, 40),
-                child: FloatingActionButton.extended(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/start');
-                  },
-                  label: Text(
-                    "Log out",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  icon: Icon(
-                    Icons.logout,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                  backgroundColor: Colors.deepPurple,
-                ),
-              ),
             ],
+          ),
+          floatingActionButton: Container(
+            padding: EdgeInsets.fromLTRB(0, 0, 100, 0),
+            child: FloatingActionButton.extended(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/start');
+              },
+              label: Text(
+                "Log out",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+              icon: Icon(
+                Icons.logout,
+                color: Colors.white,
+                size: 30,
+              ),
+              backgroundColor: Colors.deepPurple,
+            ),
           ),
         ));
   }
