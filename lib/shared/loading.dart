@@ -14,7 +14,7 @@ class _LoadingState extends State<Loading> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 7), () => Navigator.of(context).pushNamed("/home"));
+    Timer(Duration(seconds: 4), () => Navigator.of(context).pushNamed("/home"));
   }
 
   @override

@@ -38,8 +38,8 @@ class _HomeState extends State<Home> {
           setState(() {
             selectedpage = index;
             pageController.animateToPage(selectedpage,
-                duration: Duration(milliseconds: 200),
-                curve: Curves.slowMiddle);
+                curve: Curves.slowMiddle,
+                duration: Duration(milliseconds: 200));
           });
         },
       ),
@@ -82,6 +82,9 @@ class _HomeState extends State<Home> {
             setState(() {
               selectedpage = index;
               //print("$selectedpage");
+              pageController.animateToPage(selectedpage,
+                  curve: Curves.slowMiddle,
+                  duration: Duration(milliseconds: 200));
             });
           }),
     );
