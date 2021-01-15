@@ -45,8 +45,8 @@ class _HomeState extends State<Home> {
       ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedpage,
-          selectedItemColor: ThemeData.dark().accentColor,
-          unselectedItemColor: Colors.white,
+          selectedItemColor: Colors.purple[800],
+          unselectedItemColor: Colors.grey,
           type: BottomNavigationBarType.shifting,
           items: [
             BottomNavigationBarItem(
