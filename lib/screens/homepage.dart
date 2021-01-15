@@ -21,11 +21,28 @@ class _HomeState extends State<Home> {
     Bot(),
     UserProfile()
   ];
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    pageController = PageController();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: tabs.elementAt(selectedpage)),
+      body: PageView(
+        controller: pageController,
+        children: tabs,
+        onPageChanged: (index) {
+          setState(() {
+            selectedpage = index;
+            pageController.animateToPage(selectedpage,
+                duration: Duration(milliseconds: 200),
+                curve: Curves.slowMiddle);
+          });
+        },
+      ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedpage,
           selectedItemColor: ThemeData.dark().accentColor,
@@ -64,7 +81,6 @@ class _HomeState extends State<Home> {
           onTap: (int index) {
             setState(() {
               selectedpage = index;
-
               //print("$selectedpage");
             });
           }),
