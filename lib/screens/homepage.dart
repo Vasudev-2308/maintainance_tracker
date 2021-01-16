@@ -37,9 +37,11 @@ class _HomeState extends State<Home> {
         onPageChanged: (index) {
           setState(() {
             selectedpage = index;
-            pageController.animateToPage(selectedpage,
-                curve: Curves.slowMiddle,
-                duration: Duration(milliseconds: 200));
+            pageController.jumpToPage(
+              index,
+              //curve: Curves.fastOutSlowIn,
+              //duration: Duration(milliseconds: 300)
+            );
           });
         },
       ),
@@ -82,9 +84,7 @@ class _HomeState extends State<Home> {
             setState(() {
               selectedpage = index;
               //print("$selectedpage");
-              pageController.animateToPage(selectedpage,
-                  curve: Curves.slowMiddle,
-                  duration: Duration(milliseconds: 200));
+              pageController.jumpToPage(index);
             });
           }),
     );
