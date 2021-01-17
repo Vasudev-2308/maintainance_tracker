@@ -48,7 +48,7 @@ class _TransactionsState extends State<Transactions> {
           ),
           floatingActionButton: FloatingActionButton.extended(
             onPressed: () {
-              showModalBottomSheet(
+              /*showModalBottomSheet(
                   isDismissible: true,
                   //isScrollControlled: true,
                   context: context,
@@ -59,7 +59,8 @@ class _TransactionsState extends State<Transactions> {
                       padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                       child: EditForm(),
                     );
-                  });
+                  });*/
+              Navigator.of(context).pushNamed('/payment');
             },
             icon: Icon(
               Icons.add,

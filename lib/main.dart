@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maintainance_tracker/screens/homepage.dart';
+import 'package:maintainance_tracker/screens/paymentscreen.dart';
 import 'package:maintainance_tracker/screens/start.dart';
 import 'package:maintainance_tracker/screens/transactions.dart';
 import 'package:maintainance_tracker/screens/user.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/transactions': (context) => Transactions(),
         '/user': (context) => UserProfile(),
         '/phone': (context) => LoadingPhone(),
+        '/payment': (context) => PaymentScreen()
       },
     );
   }
