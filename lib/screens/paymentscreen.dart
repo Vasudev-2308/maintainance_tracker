@@ -6,9 +6,10 @@ class PaymentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.purple[400],
+          backgroundColor: Color(0xff7A49E1),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () {
@@ -52,7 +53,7 @@ class _ScreenState extends State<Screen> {
 
   void _generateAmount() {
     setState(() {
-      _amountController.text ="300";
+      _amountController.text = "300";
     });
   }
 
