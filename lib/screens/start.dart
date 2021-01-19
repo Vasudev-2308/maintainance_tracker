@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maintainance_tracker/authentication/googlesignin.dart';
 import 'package:maintainance_tracker/authentication/register.dart';
 import 'package:maintainance_tracker/shared/loading.dart';
 
@@ -45,9 +46,11 @@ class _StartPageState extends State<StartPage> {
           ],
         ),
       ),
-      Center(
+      Container(
+        padding: EdgeInsets.fromLTRB(50, 100, 50, 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             new FloatingActionButton.extended(
               heroTag: "cont",
@@ -70,7 +73,7 @@ class _StartPageState extends State<StartPage> {
             ),
             new FloatingActionButton.extended(
               heroTag: "google",
-              onPressed: () {},
+              onPressed: () => {},
               label: Text(
                 "Sign-Up with Google",
                 style: TextStyle(fontSize: 20, color: Colors.white),
@@ -100,9 +103,20 @@ class _StartPageState extends State<StartPage> {
               ),
               backgroundColor: Colors.green[800],
             ),
+            SizedBox(
+              height: 170,
+            )
           ],
         ),
       ),
+      Container(
+        padding: EdgeInsets.fromLTRB(120, 850, 120, 10),
+        child: Text(
+          "Atom Creative Solutions",
+          style:
+              TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[600]),
+        ),
+      )
     ]));
   }
 }

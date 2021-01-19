@@ -29,6 +29,9 @@ dependencies:
   firebase_core: ^0.5.2
   flutter_spinkit: ^4.1.0+2
   upi_pay: ^0.2.4
+  dependencies:
+  google_sign_in: ^4.5.9
+  rxdart: 0.20.0
 
 dev_dependencies:
   flutter_test:
