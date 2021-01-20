@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:maintainance_tracker/authentication/googlesignin.dart';
+//import 'package:maintainance_tracker/authentication/googlesignin.dart';
 import 'package:maintainance_tracker/authentication/register.dart';
 import 'package:maintainance_tracker/shared/loading.dart';
+import 'package:maintainance_tracker/authentication/googlesignin.dart';
 
 class StartPage extends StatefulWidget {
   @override
@@ -9,6 +11,32 @@ class StartPage extends StatefulWidget {
 }
 
 class _StartPageState extends State<StartPage> {
+  User user;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    if (user == null) {
+      signOut();
+    } else {
+      Navigator.of(context).pushNamed("/loading");
+    }
+  }
+
+  void click() async {
+    await signInwithGoogle().then((user) => {
+          passDatatoUser(user),
+          this.user = user,
+          Navigator.of(context).pushNamed("/home")
+        });
+  }
+
+  void passDatatoUser(user) {
+    this.user = user;
+    Navigator.pushNamed(context, "/user",
+        arguments: {"name": user.displayName});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +75,7 @@ class _StartPageState extends State<StartPage> {
         ),
       ),
       Container(
-        padding: EdgeInsets.fromLTRB(50, 100, 50, 0),
+        padding: EdgeInsets.fromLTRB(50, 150, 50, 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -73,13 +101,16 @@ class _StartPageState extends State<StartPage> {
             ),
             new FloatingActionButton.extended(
               heroTag: "google",
-              onPressed: () => {},
+              onPressed: () {
+                //passDatatoUser();
+                click();
+              },
               label: Text(
                 "Sign-Up with Google",
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
               icon: Icon(
-                Icons.mail_sharp,
+                Icons.security,
                 size: 30,
               ),
               backgroundColor: Colors.red,

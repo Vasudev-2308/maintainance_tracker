@@ -14,7 +14,7 @@ class _LoadingState extends State<Loading> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 4), () => Navigator.of(context).pushNamed("/home"));
+    Timer(Duration(seconds: 3), () => Navigator.of(context).pushNamed("/home"));
   }
 
   @override
@@ -36,7 +36,7 @@ class _LoadingState extends State<Loading> {
             Center(
               child: Text(
                 " Loading...",
-                style: TextStyle(color: Colors.grey[700], fontSize: 16),
+                style: TextStyle(fontSize: 16),
               ),
             )
           ],
